@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+
+<!-- From https://piyush132000.medium.com/sharing-content-on-facebook-with-javascript-a-step-by-step-guide-863221e009a9 -->
+
+<!-- Note: this doesn't seem to work !! FB complains about bad version -->
+
+
+<script>
+       FB.init({
+      appId            : 'your-app-id',
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+
+    function shareOnFacebook() {
+        FB.ui({
+            method: 'share',
+            href: 'https://your-website.com/page-to-share',
+        }, function (response) { });
+    }
+
+</script>
+
+<script async defer crossorigin = "anonymous" src = "https://connect.facebook.net/en_US/sdk.js"></script>
+
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+</head>
+
+<body>
+    Content goes here.
+
+    <button onclick="shareOnFacebook()">Share on Facebook</button>
+
+</body>
+
+</html>

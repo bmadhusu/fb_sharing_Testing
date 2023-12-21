@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+
+<!-- From https://developers.facebook.com/docs/javascript/quickstart -->
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+    //   appId            : 'your-app-id',
+      appId            : '2100555816934503',
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+  };
+
+  function shareOnFacebook() {
+        FB.ui({
+            method: 'share',
+            // href: 'https://your-website.com/page-to-share',
+            href: 'http://nytimes.com',
+        }, function (response) { });
+    }
+        
+</script>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+</head>
+
+<body>
+    Content goes here. BLAH BLAH
+    <br><br>
+
+    <button onclick="shareOnFacebook()">Share on Facebook</button>
+
+</body>
+
+</html>
